@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Students</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/default.css') }}">
+</head>
+<body>
+   <nav>
+      <a href = "{{ url_for('show_all') }}">Show All Student</a> |
+      <a href = "{{ url_for('new') }}">Add Student</a>
+   </nav>
+      <section>
+      <h3>Students</h3>
+      <form action="/uploader" method = "POST" enctype="multipart/form-data">
+			<input type="file" name="file" />
+			<input type="submit" value="enviar" />
+		</form>
+      
+    </section>
+   </body>
+</html>
